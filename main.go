@@ -8,6 +8,10 @@ import (
 )
 
 func mains(args []string) error {
+	if len(args) < 1 {
+		return fmt.Errorf("Usage: %s COMMAND ARGS...", os.Args[0])
+	}
+
 	newArgs := make([]string, 0, len(args))
 	for _, s := range args {
 		newS := strings.ReplaceAll(s, `'`, `"`)

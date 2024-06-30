@@ -3,7 +3,7 @@
 single2double.exe
 =================
 
-In Windows, we have to write one-liner with `\"` for string literals.
+In CMD.EXE, we have to write one-liner with `\"` for string literals.
 
 ```sh
 cat issues.json | jq -r ". | map(\"#\"+(.number|tostring)+\" [\"+ .user.login + \"](\"+ .user.html_url + \")\") | join(\"\r\n\")"
